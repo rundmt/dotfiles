@@ -32,3 +32,5 @@ alias z="zeus"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'

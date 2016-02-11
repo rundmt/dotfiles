@@ -1,7 +1,7 @@
 [push]
   default = current
 [color]
-  ui = auto
+	ui = true
 [alias]
   aa = add --all
   ap = add --patch
@@ -15,7 +15,7 @@
   st = status
   up = !git fetch origin && git rebase origin/master
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/derek/.gitignore
   autocrlf = input
 [merge]
   ff = only
@@ -25,3 +25,18 @@
   template = ~/.gitmessage
 [fetch]
   prune = true
+[user]
+	name = Derek Tor
+	email = derekmuoktor@gmail.com
+[merge "ours"]
+	name = \"always keep ours\" merge driver
+	driver = touch %A
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
