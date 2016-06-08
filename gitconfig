@@ -17,6 +17,7 @@
 [core]
 	excludesfile = /Users/derek/.gitignore
   autocrlf = input
+	editor = /usr/bin/vim
 [merge]
   ff = only
 [include]

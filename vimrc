@@ -103,7 +103,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
